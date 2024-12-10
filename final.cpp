@@ -55,9 +55,18 @@ void displayShop(const string& booth, const vector<coffeeCustomer>& queue) {
 
     cout << "[" << c.name << " (" << c.order << " )]"; 
   }
+  cout << endl; 
 }
 
 int main() {
+
+  srand(static_cast<unsigned>(time(0))); 
+
+  vector<string> nameList = {"Alex", "Bob", "Kit", "Brian", "Grace", "Charlie", "John", "Mike"}; 
+  vector<string> orderList = {"Decaf", "Dark", "Espresso", "Frappe", "Latte"}; 
+  vector<string> braceletList = {"Red", "Blue", "Yellow", "Orange", "Purple"}; 
+  vector<string> itemList = {"Sandwich", "Candy", "Chocolate", "Pretzel", "Caramel", "Sundae"}; 
+  
 
 
   return 0; 
