@@ -39,6 +39,19 @@ Node* serving(Node* head) {
 
   delete temp; 
   return head; 
+}
+
+coffeeCustomer create(const vector<string>& names, const vector<string>& order) {
+
+  return {names[rand() % names.size()], order[rand() % order.size()]; 
+
+}
 
 
+
+
+int main() {
+
+
+  return 0; 
 }
