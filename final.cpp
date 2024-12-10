@@ -94,6 +94,21 @@ int main() {
   for (int round = 1; round <= 10; ++round) {
 
     cout << endl << " Round " << round << endl; 
+
+      if (headNode) {
+
+        cout << "Serving customer: " << headNode->customer.name << " (" << headNode->customer.order << ")\n";
+        headNode = serving(headNode); 
+    } else {
+        cout << "Empty..\n"; 
+      }
+
+    if (rand() % 2 == 0) {
+
+      coffeeCustomer newCustomer = create(nameList, orderList); 
+      cout << "New customer has joined: " << newCustomer.name << " (" << newCustomer.order << ")\n"; 
+    }
+    
   }
 
 
