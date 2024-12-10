@@ -107,6 +107,19 @@ int main() {
 
       coffeeCustomer newCustomer = create(nameList, orderList); 
       cout << "New customer has joined: " << newCustomer.name << " (" << newCustomer.order << ")\n"; 
+
+      if (!headNode) {
+
+        headNode = tailNode = addQueue(tailNode, newCustomer);
+      } else {
+
+        tailNode = addQueue(tailNode, newCustomer); 
+      }
+    }
+
+    if (!muffins.empty()) {
+
+      cout << "Serving customer: " << muffins.front().name << " (" << muffins.front().order << ")\n"; 
     }
     
   }
