@@ -144,6 +144,23 @@ int main() {
       cout << "Bracelets queue is empty...\n"; 
     }
 
+    if (rand() % 2 == 0) {
+
+      coffeeCustomer newCustomer = create(nameList, braceletList); 
+      cout << "New customer for bracelets has joined: " << newCustomer.name << " (" << newCustomer.order << ")\n"; 
+      bracelets.push_back(newCustomer); 
+
+    }
+
+    if (!customers.empty()) {
+
+      cout << "Serving custom booths for customers: " << customers.top().name << " (" << customers.top().order << ")\n"; 
+      customers.pop(); 
+    } else {
+
+      cout << "Custom booths are full...\n"; 
+    }
+
     
     
   }
