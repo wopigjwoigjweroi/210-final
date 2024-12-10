@@ -66,7 +66,24 @@ int main() {
   vector<string> orderList = {"Decaf", "Dark", "Espresso", "Frappe", "Latte"}; 
   vector<string> braceletList = {"Red", "Blue", "Yellow", "Orange", "Purple"}; 
   vector<string> itemList = {"Sandwich", "Candy", "Chocolate", "Pretzel", "Caramel", "Sundae"}; 
-  
+
+  Node* headNode = nullptr; 
+  Node* tailNode = nullptr; 
+
+  for (int i = 0; i < 3; ++i) {
+
+    coffeeCustomer customer = create(nameList, orderList);
+
+    if (!headNode) {
+
+      headNode = tailNode = addQueue(nullptr, customer); 
+
+    } else {
+
+      tailNode = addQueue(tailNode, customer); 
+    }
+
+  }
 
 
   return 0; 
