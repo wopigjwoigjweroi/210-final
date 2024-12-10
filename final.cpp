@@ -63,6 +63,7 @@ int main() {
   srand(static_cast<unsigned>(time(0))); 
 
   vector<string> nameList = {"Alex", "Bob", "Kit", "Brian", "Grace", "Charlie", "John", "Mike"}; 
+  vector<string> muffinList = {"Blueberry", "Chocolate Chip", "Plain", "Pumpkin Spice", "Lemon"}; 
   vector<string> orderList = {"Decaf", "Dark", "Espresso", "Frappe", "Latte"}; 
   vector<string> braceletList = {"Red", "Blue", "Yellow", "Orange", "Purple"}; 
   vector<string> itemList = {"Sandwich", "Candy", "Chocolate", "Pretzel", "Caramel", "Sundae"}; 
@@ -120,7 +121,30 @@ int main() {
     if (!muffins.empty()) {
 
       cout << "Serving customer: " << muffins.front().name << " (" << muffins.front().order << ")\n"; 
+
+      muffins.pop_front(); 
+    } else {
+
+      cout << "Muffins queue empty...\n"; 
     }
+
+    if (rand() % 2 == 0) {
+
+      coffeeCustomer newCustomer = create(nameList, muffinList); 
+      cout << "New customer for muffins has joined: " << newCustomer.name << " (" << newCustomer.order << ")\n"; 
+      muffins.push_back(newCustomer); 
+    }
+
+    if (!bracelets.empty()) {
+
+      cout << "Serving customer: " << bracelets.front().name << " (" << bracelets.front().order << ")\n"; 
+      bracelets.erase(bracelets.begin()); 
+    } else {
+
+      cout << "Bracelets queue is empty...\n"; 
+    }
+
+    
     
   }
 
