@@ -1,3 +1,4 @@
+// COMSC210 | Jeremiah Ortiz | FA24 Final
 #include <iostream>
 #include <vector>
 #include <deque>
@@ -158,13 +159,16 @@ int main() {
       customers.pop(); 
     } else {
 
-      cout << "Custom booths are full...\n"; 
+      cout << "Custom booths are empty...\n"; 
     }
 
-    
-    
-  }
+    if (rand() % 2 == 0) {
 
+      coffeeCustomer newCustomer = create(nameList, itemList);
+      cout << "New customer for custom items ahs joined: " << newCustomer.name << " (" << newCustomer.order << ")\n"; 
+      customers.push(newCustomer); 
+    }
+  }
 
   return 0; 
 }
