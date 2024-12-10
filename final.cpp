@@ -43,12 +43,19 @@ Node* serving(Node* head) {
 
 coffeeCustomer create(const vector<string>& names, const vector<string>& order) {
 
-  return {names[rand() % names.size()], order[rand() % order.size()]; 
+  return {names[rand() % names.size()], order[rand() % order.size()]}; 
 
 }
 
+void displayShop(const string& booth, const vector<coffeeCustomer>& queue) {
 
+  cout << booth << " queue: \n"; 
 
+  for (const auto& c : queue) {
+
+    cout << "[" << c.name << " (" << c.order << " )]"; 
+  }
+}
 
 int main() {
 
