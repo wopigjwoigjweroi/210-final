@@ -84,6 +84,17 @@ int main() {
     }
 
   }
+   
+  vector<coffeeCustomer> bracelets;
+  
+  deque<coffeeCustomer> muffins; 
+
+  stack<coffeeCustomer> customers; 
+
+  for (int round = 1; round <= 10; ++round) {
+
+    cout << endl << " Round " << round << endl; 
+  }
 
 
   return 0; 
