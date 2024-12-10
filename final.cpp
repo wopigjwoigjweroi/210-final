@@ -101,6 +101,11 @@ int main() {
 
         cout << "Serving customer: " << headNode->customer.name << " (" << headNode->customer.order << ")\n";
         headNode = serving(headNode); 
+
+        if (!headNode) {
+
+          tailNode = nullptr; 
+        }
     } else {
         cout << "Empty..\n"; 
       }
